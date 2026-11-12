@@ -7,7 +7,7 @@
     <title>Mon Blog Personnel - Accueil</title>
     <!-- CSS Organisé pour N1 -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
@@ -87,7 +87,7 @@
                         <a href="article.php?id=<?= $article['id'] ?>" class="carte-image">
                             <img src="images/<?= htmlspecialchars($article['image']) ?>" alt="Illustration">
                         </a>
-                        <span class="etiquette-categorie"><?= htmlspecialchars($article['categorie_libelle']) ?></span>
+                        <span class="etiquette-categorie <?php if ($article['categorie_couleur'] == 'bleu'): ?>bleu<?php else: ?>rose<?php endif; ?>"><?= htmlspecialchars($article['categorie_libelle']) ?></span>
                         <div class="carte-contenu">
                             <h3><a href="article.php?id=<?= $article['id'] ?>"><?= htmlspecialchars($article['titre']) ?></a>
                             </h3>
