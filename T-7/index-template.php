@@ -7,7 +7,6 @@
     <title>Mon Blog Personnel - Accueil</title>
     <!-- CSS Organisé pour N1 -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body>

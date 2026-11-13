@@ -61,10 +61,9 @@
                 <h2>Explorer par thème</h2>
                 <div class="liste-filtres">
                     <a href="public-index.html" class="pilule-filtre actif">Tous les articles</a>
-                    <a href="public-categorie.html" class="pilule-filtre">Développement</a>
-                    <a href="public-categorie.html" class="pilule-filtre">Design UI/UX</a>
-                    <a href="public-categorie.html" class="pilule-filtre">Productivité</a>
-                    <a href="public-categorie.html" class="pilule-filtre">Management</a>
+                    <?php foreach( $Categories as $cat) :?>
+                    <a href= "Categories.php?id <?=$cat['id'] ?>"  class="pilule-filtre"> <?= htmlspecialchars($cat['libelle'])  ?></a>
+                    <?php endforeach ;?>
                 </div>
             </section>
 
@@ -79,17 +78,21 @@
 
             <!-- CARTES D'ARTICLES -->
             <div class="grille-articles">
-
-
-
                 <?php foreach ($articles as $article): ?>
                     <div class="carte-article">
                         <a href="article.php?id=<?= $article['id'] ?>" class="carte-image">
                             <img src="images/<?= htmlspecialchars($article['image']) ?>" alt="Illustration">
                         </a>
-                        <span class="etiquette-categorie <?php if ($article['categorie_couleur'] == 'bleu'): ?>bleu<?php else: ?>rose<?php endif; ?>"><?= htmlspecialchars($article['categorie_libelle']) ?></span>
+                        <span
+                            class="etiquette-categorie <?php if ($article['categorie_couleur'] == 'bleu'): ?>bleu<?php else: ?>rose<?php endif; ?>">
+                            <?= htmlspecialchars($article['categorie_libelle']) ?>
+                        </span>
                         <div class="carte-contenu">
-                            <h3><a href="article.php?id=<?= $article['id'] ?>"><?= htmlspecialchars($article['titre']) ?></a>
+                            <?php if ($article['id'] == 1): ?>
+                                <small class="badge-special">⭐ À la une</small>
+                            <?php endif; ?>
+                            <h3><a
+                                    href="article.php?id=<?= $article['id'] ?>"><?= htmlspecialchars($article['titre']) ?></a>
                             </h3>
                             <p><?= htmlspecialchars(mb_substr($article['contenu'], 0, 100)) ?>...</p>
                             <div class="carte-meta">
@@ -99,9 +102,6 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-
-
             </div>
         </div>
     </section>
