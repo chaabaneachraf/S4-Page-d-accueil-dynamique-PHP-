@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/main.css">
+</head>
+
+<body>
+  <header class=" header">
+    <nav class="content">
+      <span class="logo"> chaabane achraf</span>
+      <ul>
+        <li> <a href="#"></a> Home</li>
+        <li> <a href="#"></a> Skills</li>
+        <li> <a href="#"></a> Projet</li>
+        <li> <a href="#"></a> Contact</li>
+      </ul>
+    </nav>
+    <div class="bio">
+      <p>
+        Hello, <br>
+        I AM CHAABANE ACHRAF <br>
+        Web developer
+      </p>
+      <img src="image/professionnelle__chaabane.png" alt="">
+
+    </div>
+  </header>
+
+
+  <main class="bion">
+    <section>
+      <h2 class="me"> My Skills :</h2>
+    </section>
+    <section class=" mySkills">
+
+      <article class="skill">
+        <img src="image/3D_HTML_Logo_Design.png" alt="">
+        <h3>Html</h3>
+        <p>Structuring web pages
+          with clean and semantic code.</p>
+
+
+      </article>
+      <article class="skill">
+        <img src="image/3D_CSS_logo.png" alt="">
+        <h3>CSS</h3>
+        <p>
+          Styling responsive
+          and modern layouts.</p>
+
+
+      </article>
+      <article class="skill">
+        <img src="image/3D_Javascript_Logo.png" alt="">
+        <h3>Html</h3>
+        <p>Adding interactivity
+          and dynamic features to websites..</p>
+
+
+      </article>
+
+    </section>
+
+
+
+
+
+  </main>
+  <section class="project">
+<?php foreach($projets as $projet) : ?>
+    <section class="bio-prject">
+
+      <h2> <?=htmlspecialchars($projet['titre']) ?> </h2>
+
+      <p> <?=htmlspecialchars($projet['status']) ?></p>
+      <hr>
+      <p><?=htmlspecialchars( mb_substr( $projet['definition'] ,0 ,300) ) ?></p>
+    </section>
+
+<?php endforeach ;?>
+  </section>
+
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <p>Let's work together. Feel free to reach ou</p>
+    <div class="liste">
+      <a href="#" class=""> Email</a>
+      <a href="#" class=""> Whatspp</a>
+      <a href="#" class=""> GitHub</a>
+    </div>
+
+  </section>
+
+  <footer class="end">
+    <hr>
+    <p>&copy; chaabane achraf</p>
+
+  </footer>
+</body>
+
+</html>
