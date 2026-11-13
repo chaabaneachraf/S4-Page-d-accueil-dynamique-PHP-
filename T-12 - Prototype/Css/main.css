@@ -1,0 +1,86 @@
+
+.me {
+    text-align: center;
+
+    
+
+} 
+.mySkills{
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+   
+
+.skill {
+height: 300px;
+width: 200px;
+background-color: #111A20;
+text-align: center;
+line-height: 1.5;
+padding: 20px;
+border-radius: 40px;
+margin:20px ;
+border: 3px solid #ffff;
+
+}
+.skill img{
+    width: 70px;
+    height: 70px;
+}
+.project{
+    display: flex;
+    gap: 20px;
+}
+.bio-prject{
+    margin: 30px;
+    border:3px solid #fff; ;
+    width: 40%;
+    height: 300px;
+     margin: auto;
+    background: #111A20;
+    line-height: 1.5;
+    border-radius: 30px;
+    text-align: center;
+    
+}
+.bio-prject h2{
+    background: #10b981;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+    
+
+}
+.bio-prject p{
+    padding: 30px;
+}
+.contact{
+    margin: 100px;
+    padding: 20px;
+    height: 150px;
+    border: 3px solid #fff;
+    background: #111A20;
+    text-align: center;
+    border-radius: 30px;
+
+}
+.contact a{
+    color: white;
+    margin: 18px;
+    padding: 12px;
+   border: 2px solid #10b981;
+   color: #10b981;
+   border-radius: 30px;
+}
+.contact p{
+    margin: 30px;
+}
+.liste{
+    margin: 30px;
+}
+.end{
+    padding: 10px;
+text-align: center;
+}
