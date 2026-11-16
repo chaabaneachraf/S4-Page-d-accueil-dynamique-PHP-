@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class=" header">
+  <header class=" header ana">
     <nav class="content">
       <span class="logo"> chaabane achraf</span>
       <ul>
@@ -36,33 +36,24 @@
     <section>
       <h2 class="me"> My Skills :</h2>
     </section>
+
     <section class=" mySkills">
 
+<?php foreach($skills as $skill) :?>
       <article class="skill">
-        <img src="image/3D_HTML_Logo_Design.png" alt="">
-        <h3>Html</h3>
-        <p>Structuring web pages
-          with clean and semantic code.</p>
 
-
-      </article>
-      <article class="skill">
-        <img src="image/3D_CSS_logo.png" alt="">
-        <h3>CSS</h3>
+        <img src="image/<?=$skill['imag'] ?>" alt="">
+        <h3><?= htmlspecialchars($skill['titre']) ?></h3>
         <p>
-          Styling responsive
-          and modern layouts.</p>
+          <?=htmlspecialchars( $skill['contenu'])?>
+        </p>
 
 
       </article>
-      <article class="skill">
-        <img src="image/3D_Javascript_Logo.png" alt="">
-        <h3>Html</h3>
-        <p>Adding interactivity
-          and dynamic features to websites..</p>
+      <?php endforeach; ?>
 
 
-      </article>
+
 
     </section>
 
@@ -72,17 +63,17 @@
 
   </main>
   <section class="project">
-<?php foreach($projets as $projet) : ?>
-    <section class="bio-prject">
+    <?php foreach ($projets as $projet): ?>
+      <section class="bio-prject">
 
-      <h2> <?=htmlspecialchars($projet['titre']) ?> </h2>
+        <h2> <?= htmlspecialchars($projet['titre']) ?> </h2>
 
-      <p> <?=htmlspecialchars($projet['status']) ?></p>
-      <hr>
-      <p><?=htmlspecialchars( mb_substr( $projet['definition'] ,0 ,300) ) ?></p>
-    </section>
+        <p> <?= htmlspecialchars($projet['status']) ?></p>
+        <hr>
+        <p><?= htmlspecialchars(mb_substr($projet['definition'], 0, 300)) ?></p>
+      </section>
 
-<?php endforeach ;?>
+    <?php endforeach; ?>
   </section>
 
   <section class="contact">
